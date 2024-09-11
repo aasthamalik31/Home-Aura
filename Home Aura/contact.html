@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Aura</title>
+    <link rel="icon" href="ww.jpeg" type="image/x-icon">
+    <link rel="icon" href="ww.jpeg" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        
+      
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+    
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar h1 {
+            font-weight: 900;
+            color: #5c6c5c;
+            margin: 0;
+            font-size: 1.6rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .navbar h1 span {
+            font-weight: 900;
+            color: #595959;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #6f2bb4;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .nav-links a:hover {
+            color: #4d1a8a;
+        }
+
+        
+        .contact {
+            position: relative;
+            min-height: 100vh;
+            padding: 50px 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: url("contactss.jpg");
+            background-size: cover;
+        }
+
+        .contact .cn1 {
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .contact .cn1 h2 {
+            font-size: 36px;
+            font-weight: 500;
+            color: white;
+        }
+
+        .contact .content p {
+            font-weight: 300;
+            color: white;
+        }
+
+        .cn2 {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            flex-wrap: nowrap;
+        }
+
+        .cn2 .contactInfo {
+            flex-basis: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .cn2 .contactInfo .box {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .cn2 .contactInfo .box .icon {
+            min-width: 50px;
+            height: 50px;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 18px;
+            color: black;
+            margin-right: 10px;
+        }
+
+        .container .contactInfo .box .text p {
+            color: white;
+            font-weight: 300;
+            font-size: 14px;
+        }
+
+        .container .contactInfo .box .text h3 {
+            font-weight: 600;
+            color: white;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+
+        .caontactForm {
+            flex-basis: 30%;
+            padding: 10px;
+            background: #f3f3f3;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .caontactForm h2 {
+            font-size: 30px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .caontactForm .inputbox {
+            position: relative;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .caontactForm .inputbox input,
+        .caontactForm .inputbox textarea {
+            width: 100%;
+            padding: 5px 0;
+            font-size: 16px;
+            margin: 10px 0;
+            border: none;
+            border-bottom: 2px solid #333;
+            outline: none;
+            resize: none;
+        }
+
+        .subscribe-section {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .subscribe-section h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .subscribe-section input[type="email"] {
+            padding: 10px;
+            width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        .subscribe-section input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .subscribe-section input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        
+        .footer {
+            background-color: #485b64;
+            color: white;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer div {
+            flex: 1;
+            margin: 10px;
+            min-width: 200px;
+        }
+
+        .footer h4 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .footer p, .footer a {
+            font-size: 14px;
+            color: white;
+            text-decoration: none;
+            line-height: 1.8;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .company-links ul, .footer .about-links ul, .footer .get-in-touch ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer .company-links ul li, .footer .about-links ul li, .footer .get-in-touch ul li {
+            margin-bottom: 8px;
+        }
+
+       
+        .footer-bottom {
+            text-align: center;
+            padding: 15px;
+            background-color: #324044;
+            color: #ccc;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="navbar">
+        <h1>Home Aura - <span>Transforming Spaces, Elevating Lifestyle</span></h1>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+   
+    <section class="contact">
+        <div class="cn1">
+            <h2>Contact Us</h2>
+            <p>
+                The journey of transforming a space into something beautiful often involves challenges and difficult decisions. Each design project comes with its own set of obstacles, whether it's working within a budget, choosing the right materials, or balancing aesthetics with functionality.
+            </p>
+        </div>
+        <div class="cn2"> 
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>Manipur<br>House-01<br>Mirpur-11.5<br>1258</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>+917419717250</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>homeaurainterior@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="caontactForm">
+                <form>
+                    <h2>Send Message</h2>
+                    <div class="inputbox">
+                        <label>Full Name</label>
+                        <input type="text" name="" required="required">
+                    </div>
+                    <div class="inputbox">
+                        <label>Email</label>
+                        <input type="text" name="" required="required">
+                    </div>
+                    <div class="inputbox">
+                        <label>Type Message...</label>
+                        <textarea required="required"></textarea>
+                    </div>
+                    <div class="inputbox">
+                        <input type="submit" name="" value="Send">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="subscribe-section">
+        <h3>Subscribe to our newsletter</h3>
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <input type="submit" value="Subscribe">
+        </form>
+    </section>
+
+   
+    <footer class="footer">
+        <div class="company-links">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Careers</a></li>
+            </ul>
+        </div>
+        <div class="about-links">
+            <h4>About</h4>
+            <ul>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="get-in-touch">
+            <h4>Get in Touch</h4>
+            <ul>
+                <li><a href="#">Email: support@homeaura.com</a></li>
+                <li><a href="#">Phone: +123-456-7890</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    
+    <div class="footer-bottom">
+        <p>&copy; 2023 Home Aura. All Rights Reserved.</p>
+    </div>
+</body>
+</html>

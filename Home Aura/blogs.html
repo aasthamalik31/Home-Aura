@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Design Blog - Home Aura</title>
+    <link rel="icon" href="ww.jpeg" type="image/x-icon">
+    <link rel="icon" href="ww.jpeg" type="image/png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .navbar h1 {
+            font-weight: 900;
+            color: #5c6c5c;
+            margin: 0;
+            font-size: 1.6rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .navbar h1 span {
+            font-weight: 900;
+            color: #595959;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #6f2bb4;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .nav-links a:hover {
+            color: #000000;
+        }
+
+        header {
+            text-align: center;
+            background: #fff;
+            padding: 30px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 28px;
+            color: #333;
+            margin: 0 0 10px 0;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #666;
+            margin: 0 0 20px 0;
+        }
+
+        .class-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .class-bar input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+            margin-right: 10px;
+        }
+
+        .class-bar button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .class-bar button:hover {
+            background-color: #070707;
+        }
+
+        .blog-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .blog-block1 {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .blog-block1:hover {
+            transform: scale(1.03);
+        }
+
+        .blog-block1 img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .blog-block1 h2 {
+            font-size: 20px;
+            color: #333;
+            margin: 15px;
+        }
+
+        .blog-block1 p {
+            font-size: 16px;
+            color: #666;
+            margin: 0 15px 20px 15px;
+        }
+
+          
+          .subscription-section {
+            background-color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .subscription-section input[type="email"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 250px;
+        }
+
+        .subscription-section button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4a4a4a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .subscription-section button:hover {
+            background-color: #333;
+        }
+
+        
+        footer {
+            background-color: #4a4a4a;
+            color: white;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .footer-column {
+            flex: 1;
+            margin: 20px;
+            min-width: 200px;
+        }
+
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-column p, 
+        .footer-column ul {
+            font-size: 14px;
+            color: #d9d9d9;
+        }
+
+        .footer-column ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #d9d9d9;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            color: white;
+        }
+
+        .footer-column .contact-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .footer-column .contact-info i {
+            margin-right: 10px;
+        }
+
+        .footer-column .contact-info p {
+            margin: 0;
+        }
+
+        
+        .footer-bottom {
+            background-color: #3a3a3a;
+            text-align: center;
+            padding: 10px 0;
+            color: white;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="navbar">
+        <h1>Home Aura - <span>Transforming Spaces, Elevating Lifestyle</span></h1>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    
+    <header>
+        <h1>Inspiration & Ideas for Your Dream Home</h1>
+        <p>Explore the latest trends, tips, and design ideas from our experts.</p>
+        <div class="class-bar">
+            <input type="text" placeholder="Search blogs">
+            <button type="search">Search</button>
+        </div>
+    </header>
+
+    
+    <div class="blog-box">
+        <div class="blog-block1">
+            <img src="https://telkitchens.in/srckchn/uploads/2022/03/Timeless-Elegant-and-sleek-Modular-Kitchen-by-TEL.jpg" alt="Living Room Design">
+            <h2>10 easy ways to update your kitchen</h2>
+            <p>Makeover your living room with these simple and inexpensive solutions.</p>
+        </div>
+
+        <div class="blog-block1">
+            <img src="https://www.befunky.com/images/wp/wp-2022-09-Color-Palette-Featured.png?auto=avif,webp&format=jpg&width=1136&crop=16:9" alt="Color Palette">
+            <h2>How to choose the Perfect Color Palette for your home</h2>
+            <p>Figure out how to choose colors that match the contours of your room and your personal style.</p>
+        </div>
+
+        <div class="blog-block1">
+            <img src="https://i.pinimg.com/originals/5a/53/b4/5a53b4b0377d7fda9d57177825ab4c3a.jpg" alt="Small Space Design">
+            <h2>Making the most of small spaces: Tips for urban living</h2>
+            <p>Make the most of your small space with these smart design strategies.</p>
+        </div>
+
+        <div class="blog-block1">
+            <img src="https://www.hindustantimes.com/ht-img/img/2023/03/27/1600x900/spacejoy-KSfe2Z4REEM-unsplash_1679907430530_1679907438409_1679907438409.jpg" alt="Interior Design Trends">
+            <h2>Top interior design trends for 2024</h2>
+            <p>Discover the hottest trends in interior design in the coming year.</p>
+        </div>
+
+        <div class="blog-block1">
+            <img src="https://eco.int/wp-content/uploads/2023/05/sustainable_goals.jpg" alt="Sustainable Materials">
+            <h2>Sustainable additions to your home</h2>
+            <p>Explore eco-friendly materials for sustainable living.</p>
+        </div>
+
+        <div class="blog-block1">
+            <img src="https://www.thespruce.com/thmb/ercyUzkNihNJGN9yIfD_y___t_g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/cozy-bedroom-ideas-5078657-hero-2763eb67d1f0404e9ab8eb7280553e8e.jpg" alt="Cozy Bedroom">
+            <h2>Designing a cozy bedroom retreat</h2>
+            <p>Create a warm and inviting bedroom that you will enjoy relaxing in.</p>
+        </div>
+
+        <div class="blog-block1">
+            <img src="https://www.oppeinhome.com/upload/images/ueditor/20220616/7-Tips-to-Maximize-the-Kitchen-Storage-Space-1.jpg" alt="Kitchen Layout">
+            <h2>Kitchen Designs: What works best for your space?</h2>
+            <p>Find the ideal kitchen design that suits your space and cooking style.</p>
+        </div>
+
+        <div class="blog-block1">
+            <img src="https://cdn.mos.cms.futurecdn.net/koqquZZfQgzvGLjFkZQ8wJ-1200-80.jpeg" alt="Indoor Garden">
+            <h2>Building your own indoor garden: A step-by-step guide</h2>
+            <p>Bring nature indoors with a beautiful indoor garden accessible.</p>
+        </div>
+
+        <div class="blog-block1">
+            <img src="https://cdn.shopify.com/s/files/1/0338/9934/8108/files/creating-a-vibrant-inviting-atmosphere-for-your-outdoor-spaces-6_1024x1024.jpg?v=1681168108" alt="Outdoor Living Space">
+            <h2>Creating an inviting outdoor living space</h2>
+            <p>Transform your backyard into a beautiful and functional outdoor retreat.</p>
+        </div>
+
+        <div class="blog-block1">
+            <img src="https://www.decorilla.com/online-decorating/wp-content/uploads/2018/07/15_Minimalist-interior-design-living-room.jpg" alt="Minimalist Decor">
+            <h2>The art of minimalist decor</h2>
+            <p>Learn how to achieve a clean and modern look with minimalist design principles.</p>
+        </div>
+
+        <div class="blog-block1">
+            <img src="https://www.home-designing.com/wp-content/uploads/2018/03/home-office-shelving.1.jpg" alt="Home Office Design">
+            <h2>Designing a productive home office</h2>
+            <p>Tips for creating a home office that boosts productivity and comfort.</p>
+        </div>
+
+        <div class="blog-block1">
+            <img src="https://cottonandcrete.com/cdn/shop/articles/living_room_1.jpg?v=1676489321" alt="Vintage Decor">
+            <h2>Incorporating vintage decor into modern homes</h2>
+            <p>Blend old and new with these vintage decor ideas for a unique home.</p>
+        </div>
+
+        <div class="blog-block1">
+            <img src="https://assets-news.housing.com/news/wp-content/uploads/2016/04/23094336/How-to-choose-the-perfect-decor-lights-for-your-room-FB-1200x700-compressed.jpg" alt="Lighting Design">
+            <h2>Lighting design: How to set the mood in your home</h2>
+            <p>Explore how lighting can enhance the ambiance of your home.</p>
+        </div>
+
+        <div class="blog-block1">
+            <img src="https://jumanji.livspace-cdn.com/magazine/wp-content/uploads/sites/2/2021/05/06183633/IMG_20200528_142109_2-scaled.jpg" alt="DIY Home Projects">
+            <h2>DIY home projects for the weekend</h2>
+            <p>Get creative with these easy and fun DIY projects you can do in a weekend.</p>
+        </div>
+
+        <div class="blog-block1">
+            <img src="https://www.ashoknandavanam.com/blog/images/17.jpg" alt="Eco-friendly Home">
+            <h2>Eco-friendly home design tips</h2>
+            <p>Simple ways to make your home more environmentally friendly.</p>
+        </div>
+
+        <div class="blog-block1">
+            <img src="https://assets.architecturaldigest.in/photos/631b0636ac6d3139777df715/16:9/w_2560%2Cc_limit/6%2520design%2520hacks%2520for%2520a%2520small%2520home%2520that%2520you%2520need%2520to%2520know.jpg" alt="Home Storage Solutions">
+            <h2>Maximizing storage in your home</h2>
+            <p>Innovative storage solutions to keep your home organized and clutter-free.</p>
+        </div>
+
+        <div class="blog-block1">
+            <img src="https://cdn.corporatefinanceinstitute.com/assets/budget.jpeg" alt="Luxury Interiors">
+            <h2>Luxury interiors on a budget</h2>
+            <p>How to achieve a luxurious look in your home without breaking the bank.</p>
+        </div>
+
+        <div class="blog-block1">
+            <img src="https://dam.thdstatic.com/content/production/N_ulH3Szv8CksICFLmt-Cg/OVUUvFzRO_OYQpgw_4HQiA/Original%20file/bathroom-remodel-ideas-section-6.jpg" alt="Bathroom Remodel">
+            <h2>Planning a bathroom remodel</h2>
+            <p>Everything you need to know to successfully remodel your bathroom.</p>
+        </div>
+
+        <div class="blog-block1">
+            <img src="https://dfsservices.co.in/blog/wp-content/uploads/2024/02/04V1cjqRa2VfMLDHGSlVovC-8..v1646419995.jpeg" alt="Home Security">
+            <h2>Enhancing home security with smart technology</h2>
+            <p>Protect your home with the latest in smart security technology.</p>
+        </div>
+
+        <div class="blog-block1">
+            <img src="https://www.zillowstatic.com/bedrock/app/uploads/sites/47/sell-house-with-pets-shutterstock_354161294-24fe47.jpg" alt="Pet-Friendly Design">
+            <h2>Pet-friendly home design tips</h2>
+            <p>Create a home that's comfortable and safe for your furry friends.</p>
+        </div>
+
+    </div>
+
+       <!-- Subscription Section -->
+       <div class="subscription-section">
+        <h2>Subscribe to get the latest news about us</h2>
+        <input type="email" placeholder="Enter your email address">
+        <button>Subscribe</button>
+    </div>
+
+    
+    <footer>
+        <div class="footer-column">
+            <h3>Home Aura</h3>
+            <p>Find a wide range of high-quality interior designs that will elevate the style and overall layout of your home.</p>
+            <div class="contact-info">
+                <i class="fa fa-phone"></i>
+                <p>+919876543210</p>
+            </div>
+            <div class="contact-info">
+                <i class="fa fa-map-marker"></i>
+                <p>Delhi, SCO-89, Connaught Place 1258</p>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="#">Site Map</a></li>
+                <li><a href="#">Search Terms</a></li>
+                <li><a href="#">Advanced Search</a></li>
+                <li><a href="#">Suppliers</a></li>
+                <li><a href="#">Our Stores</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>About</h3>
+            <ul>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Wishlist</a></li>
+                <li><a href="#">Checkout</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Get In Touch</h3>
+            <p>Questions or Feedback?</p>
+            <p>We'd love to hear from you.</p>
+        </div>
+    </footer>
+
+    
+    <div class="footer-bottom">
+        <p>Copyright © 2024 Home Aura. All rights reserved.</p>
+    </div>
+</body>
+</html>
