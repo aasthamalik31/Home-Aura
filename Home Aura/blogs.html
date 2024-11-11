@@ -21,7 +21,7 @@
             justify-content: space-between;
             align-items: center;
             background-color: #fff;
-            padding: 20px;
+            padding: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
@@ -252,10 +252,37 @@
     </style>
 </head>
 <body>
-
+    <!-- <script>
+        async function fetchBlogs() {
+            try {
+                const response = await fetch('https://cdn.contentful.com/spaces/{SPACE_ID}/entries');
+                const blogs = await response.json();
+                const blogBox = document.querySelector('.blog-box');
+                blogBox.innerHTML = '';
     
+                blogs.forEach(blog => {
+                    const blogBlock = document.createElement('div');
+                    blogBlock.classList.add('blog-block1');
+                    blogBlock.innerHTML = `
+                        <img src="https://via.placeholder.com/300x200" alt="${blog.title}">
+                        <h2>${blog.title}</h2>
+                        <p>${blog.body}</p>
+                    `;
+                    blogBox.appendChild(blogBlock);
+                });
+            } catch (error) {
+                console.error('Error fetching blogs:', error);
+            }
+        }
+    
+        window.onload = fetchBlogs;
+    </script> -->
+    
+      
     <div class="navbar">
-        <h1>Home Aura - <span>Transforming Spaces, Elevating Lifestyle</span></h1>
+        <a href="#">
+            <img src="ww.jpeg" alt="Your Logo" style="height: 90px; width: 150px;">
+        </a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="aboutus.html">About Us</a></li>
@@ -277,122 +304,122 @@
     
     <div class="blog-box">
         <div class="blog-block1">
-            <img src="https://telkitchens.in/srckchn/uploads/2022/03/Timeless-Elegant-and-sleek-Modular-Kitchen-by-TEL.jpg" alt="Living Room Design">
-            <h2>10 easy ways to update your kitchen</h2>
-            <p>Makeover your living room with these simple and inexpensive solutions.</p>
+            <img id="img1" src="https://telkitchens.in/srckchn/uploads/2022/03/Timeless-Elegant-and-sleek-Modular-Kitchen-by-TEL.jpg" alt="Living Room Design">
+            <h2 id="title1">10 easy ways to update your kitchen</h2>
+            <p id="desc1">Makeover your living room with these simple and inexpensive solutions.</p>
         </div>
 
         <div class="blog-block1">
-            <img src="https://www.befunky.com/images/wp/wp-2022-09-Color-Palette-Featured.png?auto=avif,webp&format=jpg&width=1136&crop=16:9" alt="Color Palette">
-            <h2>How to choose the Perfect Color Palette for your home</h2>
+            <img id="img2" src="'" alt="Color Palette">
+            <h2 id="title2">How to choose the Perfect Color Palette for your home</h2>
             <p>Figure out how to choose colors that match the contours of your room and your personal style.</p>
         </div>
 
         <div class="blog-block1">
-            <img src="https://i.pinimg.com/originals/5a/53/b4/5a53b4b0377d7fda9d57177825ab4c3a.jpg" alt="Small Space Design">
-            <h2>Making the most of small spaces: Tips for urban living</h2>
+            <img id="img3" src="https://i.pinimg.com/originals/5a/53/b4/5a53b4b0377d7fda9d57177825ab4c3a.jpg" alt="Small Space Design">
+            <h2 id="title3">Making the most of small spaces: Tips for urban living</h2>
             <p>Make the most of your small space with these smart design strategies.</p>
         </div>
 
         <div class="blog-block1">
-            <img src="https://www.hindustantimes.com/ht-img/img/2023/03/27/1600x900/spacejoy-KSfe2Z4REEM-unsplash_1679907430530_1679907438409_1679907438409.jpg" alt="Interior Design Trends">
-            <h2>Top interior design trends for 2024</h2>
+            <img id="img4" src="https://www.hindustantimes.com/ht-img/img/2023/03/27/1600x900/spacejoy-KSfe2Z4REEM-unsplash_1679907430530_1679907438409_1679907438409.jpg" alt="Interior Design Trends">
+            <h2 id="title4">Top interior design trends for 2024</h2>
             <p>Discover the hottest trends in interior design in the coming year.</p>
         </div>
 
         <div class="blog-block1">
-            <img src="https://eco.int/wp-content/uploads/2023/05/sustainable_goals.jpg" alt="Sustainable Materials">
-            <h2>Sustainable additions to your home</h2>
+            <img id="img5" src="https://eco.int/wp-content/uploads/2023/05/sustainable_goals.jpg" alt="Sustainable Materials">
+            <h2 id="title5">Sustainable additions to your home</h2>
             <p>Explore eco-friendly materials for sustainable living.</p>
         </div>
 
         <div class="blog-block1">
-            <img src="https://www.thespruce.com/thmb/ercyUzkNihNJGN9yIfD_y___t_g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/cozy-bedroom-ideas-5078657-hero-2763eb67d1f0404e9ab8eb7280553e8e.jpg" alt="Cozy Bedroom">
-            <h2>Designing a cozy bedroom retreat</h2>
+            <img id="img6" src="https://www.thespruce.com/thmb/ercyUzkNihNJGN9yIfD_y___t_g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/cozy-bedroom-ideas-5078657-hero-2763eb67d1f0404e9ab8eb7280553e8e.jpg" alt="Cozy Bedroom">
+            <h2 title="title6">Designing a cozy bedroom retreat</h2>
             <p>Create a warm and inviting bedroom that you will enjoy relaxing in.</p>
         </div>
 
         <div class="blog-block1">
-            <img src="https://www.oppeinhome.com/upload/images/ueditor/20220616/7-Tips-to-Maximize-the-Kitchen-Storage-Space-1.jpg" alt="Kitchen Layout">
-            <h2>Kitchen Designs: What works best for your space?</h2>
+            <img id="img7" src="https://www.oppeinhome.com/upload/images/ueditor/20220616/7-Tips-to-Maximize-the-Kitchen-Storage-Space-1.jpg" alt="Kitchen Layout">
+            <h2 id="title7">Kitchen Designs: What works best for your space?</h2>
             <p>Find the ideal kitchen design that suits your space and cooking style.</p>
         </div>
 
         <div class="blog-block1">
-            <img src="https://cdn.mos.cms.futurecdn.net/koqquZZfQgzvGLjFkZQ8wJ-1200-80.jpeg" alt="Indoor Garden">
-            <h2>Building your own indoor garden: A step-by-step guide</h2>
+            <img id="img8" src="https://cdn.mos.cms.futurecdn.net/koqquZZfQgzvGLjFkZQ8wJ-1200-80.jpeg" alt="Indoor Garden">
+            <h2 id="title8">Building your own indoor garden: A step-by-step guide</h2>
             <p>Bring nature indoors with a beautiful indoor garden accessible.</p>
         </div>
 
         <div class="blog-block1">
-            <img src="https://cdn.shopify.com/s/files/1/0338/9934/8108/files/creating-a-vibrant-inviting-atmosphere-for-your-outdoor-spaces-6_1024x1024.jpg?v=1681168108" alt="Outdoor Living Space">
-            <h2>Creating an inviting outdoor living space</h2>
+            <img id="img9"  src="https://cdn.shopify.com/s/files/1/0338/9934/8108/files/creating-a-vibrant-inviting-atmosphere-for-your-outdoor-spaces-6_1024x1024.jpg?v=1681168108" alt="Outdoor Living Space">
+            <h2 id="title9">Creating an inviting outdoor living space</h2>
             <p>Transform your backyard into a beautiful and functional outdoor retreat.</p>
         </div>
 
         <div class="blog-block1">
-            <img src="https://www.decorilla.com/online-decorating/wp-content/uploads/2018/07/15_Minimalist-interior-design-living-room.jpg" alt="Minimalist Decor">
-            <h2>The art of minimalist decor</h2>
+            <img id="img10" src="https://wakefitdev.gumlet.io/img/sofa-sets/solatio/fjdc/1.jpg?w=750">
+            <h2 id="title10">The art of minimalist decor</h2>
             <p>Learn how to achieve a clean and modern look with minimalist design principles.</p>
         </div>
 
         <div class="blog-block1">
-            <img src="https://www.home-designing.com/wp-content/uploads/2018/03/home-office-shelving.1.jpg" alt="Home Office Design">
-            <h2>Designing a productive home office</h2>
+            <img id="img11" src="https://www.home-designing.com/wp-content/uploads/2018/03/home-office-shelving.1.jpg" alt="Home Office Design">
+            <h2 id="title11">Designing a productive home office</h2>
             <p>Tips for creating a home office that boosts productivity and comfort.</p>
         </div>
 
         <div class="blog-block1">
-            <img src="https://cottonandcrete.com/cdn/shop/articles/living_room_1.jpg?v=1676489321" alt="Vintage Decor">
-            <h2>Incorporating vintage decor into modern homes</h2>
+            <img id="img12" src="https://cottonandcrete.com/cdn/shop/articles/living_room_1.jpg?v=1676489321" alt="Vintage Decor">
+            <h2 id="title12">Incorporating vintage decor into modern homes</h2>
             <p>Blend old and new with these vintage decor ideas for a unique home.</p>
         </div>
 
         <div class="blog-block1">
-            <img src="https://assets-news.housing.com/news/wp-content/uploads/2016/04/23094336/How-to-choose-the-perfect-decor-lights-for-your-room-FB-1200x700-compressed.jpg" alt="Lighting Design">
-            <h2>Lighting design: How to set the mood in your home</h2>
+            <img id="img13" src="https://assets-news.housing.com/news/wp-content/uploads/2016/04/23094336/How-to-choose-the-perfect-decor-lights-for-your-room-FB-1200x700-compressed.jpg" alt="Lighting Design">
+            <h2 id="title13">Lighting design: How to set the mood in your home</h2>
             <p>Explore how lighting can enhance the ambiance of your home.</p>
         </div>
 
         <div class="blog-block1">
-            <img src="https://jumanji.livspace-cdn.com/magazine/wp-content/uploads/sites/2/2021/05/06183633/IMG_20200528_142109_2-scaled.jpg" alt="DIY Home Projects">
-            <h2>DIY home projects for the weekend</h2>
+            <img id="img14" src="https://jumanji.livspace-cdn.com/magazine/wp-content/uploads/sites/2/2021/05/06183633/IMG_20200528_142109_2-scaled.jpg" alt="DIY Home Projects">
+            <h2 id="title14">DIY home projects for the weekend</h2>
             <p>Get creative with these easy and fun DIY projects you can do in a weekend.</p>
         </div>
 
         <div class="blog-block1">
-            <img src="https://www.ashoknandavanam.com/blog/images/17.jpg" alt="Eco-friendly Home">
-            <h2>Eco-friendly home design tips</h2>
+            <img id="img15" src="https://www.ashoknandavanam.com/blog/images/17.jpg" alt="Eco-friendly Home">
+            <h2 id="title15">Eco-friendly home design tips</h2>
             <p>Simple ways to make your home more environmentally friendly.</p>
         </div>
 
         <div class="blog-block1">
-            <img src="https://assets.architecturaldigest.in/photos/631b0636ac6d3139777df715/16:9/w_2560%2Cc_limit/6%2520design%2520hacks%2520for%2520a%2520small%2520home%2520that%2520you%2520need%2520to%2520know.jpg" alt="Home Storage Solutions">
-            <h2>Maximizing storage in your home</h2>
+            <img id="img16" src="https://assets.architecturaldigest.in/photos/631b0636ac6d3139777df715/16:9/w_2560%2Cc_limit/6%2520design%2520hacks%2520for%2520a%2520small%2520home%2520that%2520you%2520need%2520to%2520know.jpg" alt="Home Storage Solutions">
+            <h2 id="title16">Maximizing storage in your home</h2>
             <p>Innovative storage solutions to keep your home organized and clutter-free.</p>
         </div>
 
         <div class="blog-block1">
-            <img src="https://cdn.corporatefinanceinstitute.com/assets/budget.jpeg" alt="Luxury Interiors">
-            <h2>Luxury interiors on a budget</h2>
+            <img id="img17" src="https://cdn.corporatefinanceinstitute.com/assets/budget.jpeg" alt="Luxury Interiors">
+            <h2 id="title17">Luxury interiors on a budget</h2>
             <p>How to achieve a luxurious look in your home without breaking the bank.</p>
         </div>
 
         <div class="blog-block1">
-            <img src="https://dam.thdstatic.com/content/production/N_ulH3Szv8CksICFLmt-Cg/OVUUvFzRO_OYQpgw_4HQiA/Original%20file/bathroom-remodel-ideas-section-6.jpg" alt="Bathroom Remodel">
-            <h2>Planning a bathroom remodel</h2>
+            <img id="img18" src="https://dam.thdstatic.com/content/production/N_ulH3Szv8CksICFLmt-Cg/OVUUvFzRO_OYQpgw_4HQiA/Original%20file/bathroom-remodel-ideas-section-6.jpg" alt="Bathroom Remodel">
+            <h2 id="title18">Planning a bathroom remodel</h2>
             <p>Everything you need to know to successfully remodel your bathroom.</p>
         </div>
 
         <div class="blog-block1">
-            <img src="https://dfsservices.co.in/blog/wp-content/uploads/2024/02/04V1cjqRa2VfMLDHGSlVovC-8..v1646419995.jpeg" alt="Home Security">
-            <h2>Enhancing home security with smart technology</h2>
+            <img id="img19" src="https://dfsservices.co.in/blog/wp-content/uploads/2024/02/04V1cjqRa2VfMLDHGSlVovC-8..v1646419995.jpeg" alt="Home Security">
+            <h2 id="title19">Enhancing home security with smart technology</h2>
             <p>Protect your home with the latest in smart security technology.</p>
         </div>
 
         <div class="blog-block1">
-            <img src="https://www.zillowstatic.com/bedrock/app/uploads/sites/47/sell-house-with-pets-shutterstock_354161294-24fe47.jpg" alt="Pet-Friendly Design">
-            <h2>Pet-friendly home design tips</h2>
+            <img id="img20" src="https://www.zillowstatic.com/bedrock/app/uploads/sites/47/sell-house-with-pets-shutterstock_354161294-24fe47.jpg" alt="Pet-Friendly Design">
+            <h2 id="title20">Pet-friendly home design tips</h2>
             <p>Create a home that's comfortable and safe for your furry friends.</p>
         </div>
 
@@ -455,5 +482,32 @@
     <div class="footer-bottom">
         <p>Copyright © 2024 Home Aura. All rights reserved.</p>
     </div>
+    <script>
+        const url = "https://gnews.io/api/v4/search?q=furniture";
+        const apikey = "cc5c58ebed29845690f1281f1ada9f12";
+    
+        window.addEventListener("load", fetchdata);
+    
+        async function fetchdata() {
+            try {
+                const res = await fetch(${url}&apikey=${apikey});
+                const data = await res.json();
+                console.log(data);
+    
+                for (let i = 0; i < Math.min(20, data.articles.length); i++) {
+                    const imgElement = document.getElementById(img${i + 1});
+                    const titleElement = document.getElementById(title${i + 1});
+                    
+                    imgElement.src = data.articles[i].image || 'default-image-url.jpg';
+                    titleElement.innerHTML = data.articles[i].title || 'No Title Available';
+                }
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            }
+        }
+    </script>
+    
+
 </body>
+
 </html>
