@@ -35,7 +35,7 @@ section, nav {
 }
 
 nav {
-    padding: 2rem 1rem;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -300,17 +300,17 @@ nav {
     margin-bottom: 4rem;
 }
 
-.customer__nav .section__header { 
+.customer_nav .section_header { 
     max-width: 400px;
 }
 
-.customer__nav__icons {
+.customer_nav_icons {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.customer__nav__icons span {
+.customer_nav_icons span {
     font-size: 1.5rem;
     color: var(--primary-color);
     cursor: pointer;
@@ -346,6 +346,7 @@ nav {
     font-size: 1rem;
     color: var(--text-light);
 }
+
 
 .customer__content {
     display: flex;
@@ -482,7 +483,7 @@ footer {
         display: none;
     }
 
-    .benefits__container .section__header {
+    .benefits_container .section_header {
         margin-left: 5rem;
     }
 
@@ -515,6 +516,3 @@ footer {
         gap: 2rem;
     }
 }
-
-
-
